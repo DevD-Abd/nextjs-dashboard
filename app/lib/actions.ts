@@ -3,7 +3,6 @@ import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import postgres from 'postgres';
-import { error } from 'console';
 import { signIn } from '@/auth';
 import { AuthError } from 'next-auth';
 
@@ -55,7 +54,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
     }
     catch (error) {
         return {
-            message: 'Database error: Failed to create invoice.',
+            message: 'Database error: Failed to create invoice.', error,
         }
     }
 
@@ -98,7 +97,7 @@ export async function updateInvoice(prevState: State, id: string, formData: Form
     }
     catch (error) {
         return {
-            message: 'Database error: Failed to update invoice.',
+            message: 'Database error: Failed to update invoice.', error,
         }
     }
 
