@@ -22,7 +22,7 @@ A feature-rich dashboard application built with Next.js App Router, Tailwind CSS
 
 1. **Clone the repository:**
    ```sh
-git clone <your-repo-url>
+git clone <https://github.com/DevD-Abd/nextjs-dashboard>
 cd nextjs-dashboard
 ```
 2. **Install dependencies:**
